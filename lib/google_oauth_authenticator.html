@@ -1,0 +1,27 @@
+<link rel="import" href="../../packages/polymer/polymer.html">
+
+<!--
+The `google-oauth-authenticator` element provides an authentication service in Dart for Polymer
+apps that wish to use OAuth 2.0 for Google services or signin.
+
+##### Example
+
+    <google-oauth-authenticator></google-oauth-authenticator>
+
+@element google-oauth-authenticator
+@blurb Element providing solution to Google OAuth 2.0 authentication for Polymer apps in Dart
+@status alpha
+@homepage http://pjjjv.github.io/GoogleOAuthAuthenticator/components/google-oauth-authenticator/
+-->
+
+<polymer-element name="google-oauth-authenticator" attributes="clientId scopes auto forcePrompt forceLoadToken">
+  <template>
+    <style>
+    :host {
+      display: none;
+    }
+    </style>
+  </template>
+  <script type="application/dart" src="google_oauth_authenticator.dart"></script>
+  <script src="../../packages/browser/dart.js"></script>
+</polymer-element>

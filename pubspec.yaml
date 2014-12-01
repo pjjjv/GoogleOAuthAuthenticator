@@ -1,0 +1,14 @@
+name: google_oauth_authenticator
+version: 1.0.0
+author: pjv <ezelspinguin@gmail.com>
+description: The `google-oauth-authenticator` element provides an authentication service in Dart for Polymer apps that wish to use OAuth 2.0 for Google services or signin.
+homepage: https://github.com/pjjjv/GoogleOAuthAuthenticator
+dependencies:
+  browser: '>=0.10.0+2 <0.11.0'
+  polymer: '>=0.15.1+5 <0.16.0'
+  core_elements: '>=0.4.0+6 < 0.5.0'
+  google_oauth2_client: '>=0.4.1 <0.5.0'
+transformers:
+- polymer:
+    entry_points:
+    - web/demo.html

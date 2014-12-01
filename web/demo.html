@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>google_oauth_authenticator demo</title>
+
+    <link rel="import" href="packages/polymer/polymer.html">
+    <link rel="import" href="packages/core_elements/core_ajax_dart.html">
+    <link rel="import" href="packages/google_oauth_authenticator/google_oauth_authenticator.html">
+  </head>
+
+  <body unresolved vertical layout center>
+    <h2>Google OAuth 2.0 Authenticator Demo</h2>
+    <p>This demo shows an OAuth authentication for the userinfo api. A greeting text should appear below:</p>
+
+
+    <template is="auto-binding-dart" id="auto-bind">
+    <google-oauth-authenticator id="authenticator" auto
+      clientId="71435708886-adrd3d3qumqm1ssedko964621rlku3nj.apps.googleusercontent.com"
+      scopes="['https://www.googleapis.com/auth/userinfo.email']" on-authenticated="{{authenticated}}"></google-oauth-authenticator>
+    <core-ajax-dart id="ajax"
+      url="https://www.googleapis.com/userinfo/v2/me"
+      on-core-response="{{ajaxResponse}}" on-core-error="{{ajaxError}}"
+      handleAs="json">
+    </core-ajax-dart>
+    <p>{{greeting}}</p>
+    </template>
+
+    <script src="demo.dart" type="application/dart"></script>
+    <script src="packages/browser/dart.js"></script>
+  </body>
+</html>
